@@ -134,6 +134,7 @@ button:active .btn-bg {
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 10;
 }
 
 .down {
@@ -158,7 +159,7 @@ button:active .btn-bg {
 
 .flower {
     max-width: 400px;
-    max-height: calc(var(--vh-100) - 100px);
+    max-height: calc(100% - 100px);
 }
 
 .leaf {
