@@ -12,13 +12,14 @@ window.onload = () => {
         document.body.style.opacity = 1
     }, 1000)
 
-    document.querySelectorAll('.leaf').forEach((el) => {
-        el.setAttribute('transform-origin', 'center 25%')
-    })
+    // document.querySelectorAll('.leaf').forEach((el) => {
+    //     el.setAttribute('transform-origin', '50% 25%')
+    // })
 
     gsap.registerPlugin(ScrollTrigger)
 
-    gsap.set('.leaf', { attr: { transform: 'scale(0)' } })
+    gsap.set('.leaf', { transform: 'scale(0)' })
+    // gsap.set('.leaf', { attr: { transform: 'scale(0)' } })
 
     const btn = document.querySelector('button')
 
@@ -60,7 +61,7 @@ window.onload = () => {
 
     btnTl.then(() => {
         gsap.to('.down', { scale: 1, duration: 0.5 })
-        gsap.to('.arrows svg', { opacity: 0, duration: 0.5, stagger: 0.5, yoyo: true, repeat: -1, ease: 'none' })
+        gsap.to('.arrows svg', { opacity: 0, duration: 0.25, stagger: 0.25, yoyo: true, repeat: -1, ease: 'none' })
     })
 
     const flowerTl = gsap.timeline({
@@ -80,8 +81,14 @@ window.onload = () => {
     flowerTl.to('.clip-rect', { attr: { y: 50 } }, 'stem')
     flowerTl.to('.down', { y: -window.innerHeight / 2, opacity: 0 }, 'stem')
 
-    flowerTl.to('[data-leaf-white]', { attr: { transform: 'scale(1)' }, stagger: 0.1 }, 'leaf+=1')
-    flowerTl.to('[data-leaf-rgb]', { attr: { transform: 'scale(1)' }, stagger: 0.1 }, 'leaf')
+    flowerTl.to(
+        '[data-leaf-white]',
+        { transform: 'scale(1)', transformOrigin: '50% 25%', stagger: 0.1 },
+        'leaf+=1'
+    )
+    flowerTl.to('[data-leaf-rgb]', { transform: 'scale(1)', transformOrigin: '50% 25%', stagger: 0.1 }, 'leaf')
+    // flowerTl.to('[data-leaf-white]', { attr: { transform: 'scale(1)' }, stagger: 0.1 }, 'leaf+=1')
+    // flowerTl.to('[data-leaf-rgb]', { attr: { transform: 'scale(1)' }, stagger: 0.1 }, 'leaf')
 
     flowerTl.to('.grad-stop-white', { attr: { offset: '0%' } }, 'leaf')
     flowerTl.to('.grad-stop-light1', { attr: { offset: '10%' } }, 'leaf')

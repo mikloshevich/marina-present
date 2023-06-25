@@ -165,8 +165,9 @@ button:active .btn-bg {
 }
 
 .leaf {
-    transform-origin: center 25%;
-    /* transform-box: fill-box; */
+    transform-origin: 50% 25%;
+    -webkit-transform-origin: 50% 25%;
+    transform-box: fill-box;
 }
 
 .flower-blur {
