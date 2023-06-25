@@ -12,6 +12,10 @@ window.onload = () => {
         document.body.style.opacity = 1
     }, 1000)
 
+    document.querySelectorAll('.leaf').forEach((el) => {
+        el.setAttribute('transform-origin', 'center 25%')
+    })
+
     gsap.registerPlugin(ScrollTrigger)
 
     gsap.set('.leaf', { attr: { transform: 'scale(0)' } })
@@ -100,8 +104,8 @@ window.onload = () => {
     })
 
     gsap.set('[data-c]', { scale: 0, x: 100 })
-    gsap.set('[data-day]', { scale: 0, x: -innerWidth / 2 })
-    gsap.set('[data-birth]', { scale: 0, x: innerWidth / 2, y: window.innerHeight / 2, rotation: -180 })
+    gsap.set('[data-day]', { scale: 0, x: -window.innerWidth / 2 })
+    gsap.set('[data-birth]', { scale: 0, x: window.innerWidth / 2, y: window.innerHeight / 2, rotation: -180 })
 
     textTl.to('[data-c]', { scale: 1, x: 0, stagger: 0.05 })
     textTl.to('[data-day]', { scale: 1, x: 0, stagger: 0.01, rotation: 360 })
@@ -111,7 +115,7 @@ window.onload = () => {
     const cnv = document.getElementById('canvas')
     const ctx = cnv.getContext('2d')
 
-    cnv.width = innerWidth
+    cnv.width = window.innerWidth
     cnv.height = window.innerHeight
 
     const mouse = {
