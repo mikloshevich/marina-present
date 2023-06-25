@@ -7,6 +7,7 @@ setTimeout(function () {
     window.scrollTo(0, 0)
     document.documentElement.scrollTop = 0
     document.body.scrollTop = 0
+    document.body.style.transitionDuration = '1s'
     document.body.style.opacity = 1
 }, 1000)
 
@@ -216,7 +217,7 @@ const observer = new IntersectionObserver(
             isCanvas = intersecting ? true : false
         })
     },
-    { threshold: 1 }
+    { threshold: 0.9 }
 )
 
 observer.observe(cnv)
@@ -225,7 +226,7 @@ window.addEventListener('pointerdown', (e) => {
     mouse.x = e.clientX
     mouse.y = e.clientY
 
-    const particleCount = 50
+    const particleCount = 25
     const angleIncrement = (Math.PI * 2) / particleCount
     const power = 10
 
