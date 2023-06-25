@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --vh: 1vh;
+    --vh-100: calc(var(--vh) * 100);
+    --clip-radius: 80%;
+    --inset: -100px;
+    --bd-width: 12px;
+    --last-radius: 100%;
+}
+
+/* Scrollbar */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+svg {
+    display: block;
+}
+
+body {
+    min-height: 100vh;
+    min-height: var(--vh-100);
+    font-family: 'Jost', sans-serif;
+    background-color: #1b1c21;
+    color: #333;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.first {
+    width: 100%;
+    height: var(--vh-100);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.blured {
+    position: absolute;
+    inset: var(--inset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: blur(15px);
+}
+
+.blured-circle {
+    position: absolute;
+    inset: var(--inset);
+    background-color: #fff;
+    clip-path: circle(var(--clip-radius) at 50% 50%);
+}
+
+.btn-container {
+    background-color: #fff;
+    width: 100%;
+    height: var(--vh-100);
+    clip-path: circle(var(--clip-radius) at 50% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: 36px;
+    color: #333;
+    padding: 1.5rem 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.btn-border,
+.btn-bg {
+    position: absolute;
+    border-radius: 15px;
+    transition: transform 0.3s ease, background-color 0.2s ease;
+    transform-origin: center;
+}
+
+.btn-border {
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    background-image: linear-gradient(45deg, #444, #888);
+    background-size: cover;
+    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.7);
+}
+
+.btn-bg {
+    width: calc(100% - var(--bd-width));
+    height: calc(100% - var(--bd-width));
+    background-color: #fff;
+}
+
+button p {
+    z-index: 10;
+}
+
+button:hover .btn-bg {
+    transform: scale(1.05, 1.1);
+}
+
+button:active .btn-bg {
+    background-color: hsl(48, 100%, 93%);
+    border-width: 3px;
+}
+
+.flower-container {
+    width: 100%;
+    height: var(--vh-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.down {
+    position: absolute;
+}
+
+.down p {
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 10px;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.arrows svg {
+    width: 40px;
+}
+
+.flower {
+    max-width: 400px;
+    max-height: calc(var(--vh-100) - 100px);
+}
+
+.leaf {
+    transform-origin: center 25%;
+}
+
+.flower-blur {
+    mix-blend-mode: screen;
+    filter: blur(5px);
+}
+
+.last {
+    background-color: #1b1c21;
+    height: var(--vh-100);
+    position: relative;
+    /* z-index: 100; */
+}
+
+.last-dark {
+    --circle-y: 50%;
+    background-color: #1b1c21;
+    color: #fff;
+    height: var(--vh-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(var(--last-radius) at 75% var(--circle-y));
+}
+
+.rgb-flex {
+    display: flex;
+}
+
+.last-text {
+    position: relative;
+}
+
+.last p {
+    white-space: pre;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    transform-origin: center;
+    z-index: 100;
+}
+
+.text-rgb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    filter: blur(5px);
+}
+
+.text-rgb > div {
+    position: absolute;
+    mix-blend-mode: screen;
+}
+
+@media screen and (max-width: 1000px) {
+    .last p {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .last p {
+        font-size: 2rem;
+    }
+
+    .rgb-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.last-red {
+    color: rgb(255, 0, 0);
+}
+.last-green {
+    color: rgb(0, 255, 0);
+}
+.last-blue {
+    color: rgb(0, 0, 255);
+}
+
+.last-light {
+    width: 100%;
+    height: var(--vh-100);
+    background-color: #fff;
+    position: absolute;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+.last-black {
+    color: #222;
+}
+
+#canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* z-index: -1; */
+}

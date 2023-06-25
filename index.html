@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Happy Birthday</title>
+</head>
+
+<body>
+    <div class="first">
+        <div class="blured">
+            <div class="blured-circle"></div>
+        </div>
+        <div class="btn-container">
+            <button>
+                <div class="btn-border"></div>
+                <div class="btn-bg"></div>
+                <p>Нажми!</p>
+            </button>
+        </div>
+    </div>
+    <div class="flower-container">
+        <div class="down">
+            <p>Вниз</p>
+            <div class="arrows">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="#fff" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="#fff" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="#fff" />
+                </svg>
+            </div>
+        </div>
+        <svg class="flower" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="rgb(255, 255, 255)" />
+                    <stop class="grad-stop-white" offset="100%" stop-color="rgb(255, 255, 255)" />
+                    <stop class="light-stem grad-stop-light1" offset="110%" stop-color="rgb(150, 255, 150)" />
+                    <stop class="light-stem grad-stop-light2" offset="150%" stop-color="rgb(150, 255, 150)" />
+                    <stop class="dark-stem grad-stop-dark" offset="200%" stop-color="rgb(0, 190, 0)" />
+                </linearGradient>
+                <clipPath id="flower-cut">
+                    <rect class="clip-rect" x="0" y="300" width="200" height="300" fill="black" />
+                </clipPath>
+            </defs>
+            <g>
+                <path data-leaf-rgb class="leaf flower-blur" d="M143.479 107.795C130.589 89.2731 100.708 84.3112 100.708 84.3112C100.708 84.3112 100.806 118.96 110.464 132.838C123.969 152.244 157.982 128.636 143.479 107.795Z" fill="rgb(0, 0, 255)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M143.479 107.795C130.589 89.2731 100.708 84.3112 100.708 84.3112C100.708 84.3112 100.806 118.96 110.464 132.838C123.969 152.244 157.982 128.636 143.479 107.795Z" fill="rgb(0, 255, 0)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M143.479 107.795C130.589 89.2731 100.708 84.3112 100.708 84.3112C100.708 84.3112 100.806 118.96 110.464 132.838C123.969 152.244 157.982 128.636 143.479 107.795Z" fill="rgb(255, 0, 0)" />
+                <path data-leaf-white class="leaf" d="M143.479 107.795C130.589 89.2731 100.708 84.3112 100.708 84.3112C100.708 84.3112 100.806 118.96 110.464 132.838C123.969 152.244 157.982 128.636 143.479 107.795Z" fill="white" />
+            </g>
+            <g>
+                <path data-leaf-rgb class="leaf flower-blur" d="M91.784 133.903C104.674 115.381 99.9602 84.1777 99.9602 84.1777C99.9602 84.1777 68.427 94.9825 58.7691 108.861C45.2644 128.266 77.2809 154.743 91.784 133.903Z" fill="rgb(0, 255, 0)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M91.784 133.903C104.674 115.381 99.9602 84.1777 99.9602 84.1777C99.9602 84.1777 68.427 94.9825 58.7691 108.861C45.2644 128.266 77.2809 154.743 91.784 133.903Z" fill="rgb(255, 0, 0)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M91.784 133.903C104.674 115.381 99.9602 84.1777 99.9602 84.1777C99.9602 84.1777 68.427 94.9825 58.7691 108.861C45.2644 128.266 77.2809 154.743 91.784 133.903Z" fill="rgb(0, 0, 255)" />
+                <path data-leaf-white class="leaf" d="M91.784 133.903C104.674 115.381 99.9602 84.1777 99.9602 84.1777C99.9602 84.1777 68.427 94.9825 58.7691 108.861C45.2644 128.266 77.2809 154.743 91.784 133.903Z" fill="white" />
+            </g>
+            <g>
+                <path data-leaf-rgb class="leaf flower-blur" d="M51.9995 90.8488C72.856 97.9236 99.824 83.6011 99.824 83.6011C99.824 83.6011 80.2369 55.6303 64.6101 50.3293C42.759 42.917 28.5329 82.8885 51.9995 90.8488Z" fill="rgb(0, 0, 255)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M51.9995 90.8488C72.856 97.9236 99.824 83.6011 99.824 83.6011C99.824 83.6011 80.2369 55.6303 64.6101 50.3293C42.759 42.917 28.5329 82.8885 51.9995 90.8488Z" fill="rgb(255, 0, 0)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M51.9995 90.8488C72.856 97.9236 99.824 83.6011 99.824 83.6011C99.824 83.6011 80.2369 55.6303 64.6101 50.3293C42.759 42.917 28.5329 82.8885 51.9995 90.8488Z" fill="rgb(0, 255, 0)" />
+                <path data-leaf-white class="leaf" d="M51.9995 90.8488C72.856 97.9236 99.824 83.6011 99.824 83.6011C99.824 83.6011 80.2369 55.6303 64.6101 50.3293C42.759 42.917 28.5329 82.8885 51.9995 90.8488Z" fill="white" />
+            </g>
+            <g>
+                <path data-leaf-rgb class="leaf flower-blur" d="M78.8693 37.661C78.8693 60.5559 100.25 82.907 100.25 82.907C100.25 82.907 119.678 54.8152 119.678 37.661C119.678 13.6742 78.8693 11.9009 78.8693 37.661Z" fill="rgb(0, 255, 0)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M78.8693 37.661C78.8693 60.5559 100.25 82.907 100.25 82.907C100.25 82.907 119.678 54.8152 119.678 37.661C119.678 13.6742 78.8693 11.9009 78.8693 37.661Z" fill="rgb(0, 0, 255)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M78.8693 37.661C78.8693 60.5559 100.25 82.907 100.25 82.907C100.25 82.907 119.678 54.8152 119.678 37.661C119.678 13.6742 78.8693 11.9009 78.8693 37.661Z" fill="rgb(255, 0, 0)" />
+                <path data-leaf-white class="leaf" d="M78.8693 37.661C78.8693 60.5559 100.25 82.907 100.25 82.907C100.25 82.907 119.678 54.8152 119.678 37.661C119.678 13.6742 78.8693 11.9009 78.8693 37.661Z" fill="white" />
+            </g>
+            <g>
+                <path data-leaf-rgb class="leaf flower-blur" d="M135.39 48.1991C114.533 55.2741 100.78 83.4103 100.78 83.4103C100.78 83.4103 132.374 94.0195 148 88.7186C169.852 81.3062 158.856 40.2388 135.39 48.1991Z" fill="rgb(0, 0, 255)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M135.39 48.1991C114.533 55.2741 100.78 83.4103 100.78 83.4103C100.78 83.4103 132.374 94.0195 148 88.7186C169.852 81.3062 158.856 40.2388 135.39 48.1991Z" fill="rgb(255, 0, 0)" />
+                <path data-leaf-rgb class="leaf flower-blur" d="M135.39 48.1991C114.533 55.2741 100.78 83.4103 100.78 83.4103C100.78 83.4103 132.374 94.0195 148 88.7186C169.852 81.3062 158.856 40.2388 135.39 48.1991Z" fill="rgb(0, 255, 0)" />
+                <path data-leaf-white class="leaf" d="M135.39 48.1991C114.533 55.2741 100.78 83.4103 100.78 83.4103C100.78 83.4103 132.374 94.0195 148 88.7186C169.852 81.3062 158.856 40.2388 135.39 48.1991Z" fill="white" />
+            </g>
+            <path clip-path="url(#flower-cut)" class="stem" fill="url(#Gradient)" d="M101.33 110C101.33 110 102.386 116 104.23 128.203C105.965 139.69 106.286 151.235 106.978 162.822C108.106 181.706 103.169 199.496 103.161 218.246C103.153 237.038 108.007 255.496 108.036 274.282C108.047 281.049 98.4371 283.208 96.0077 276.66C92.4502 267.073 94.7041 260 94.7041 240.072C94.704 217.299 100.223 197.28 101.94 174.973C103.575 153.727 101.33 110 101.33 110Z" />
+        </svg>
+    </div>
+    <div class="last">
+        <div class="last-dark">
+            <div class="last-text">
+                <div class="last-white rgb-flex">
+                    <p data-c>С</p>
+                    <p data-day> Днём</p>
+                    <p data-birth> Рождения!</p>
+                </div>
+                <div class="text-rgb">
+                    <div class="last-red rgb-flex">
+                        <p data-c>С</p>
+                        <p data-day> Днём</p>
+                        <p data-birth> Рождения!</p>
+                    </div>
+                    <div class="last-green rgb-flex">
+                        <p data-c>С</p>
+                        <p data-day> Днём</p>
+                        <p data-birth> Рождения!</p>
+                    </div>
+                    <div class="last-blue rgb-flex">
+                        <p data-c>С</p>
+                        <p data-day> Днём</p>
+                        <p data-birth> Рождения!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="last-light">
+            <div class="last-black rgb-flex">
+                <p data-c>С</p>
+                <p data-day> Днём</p>
+                <p data-birth> Рождения!</p>
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js" integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
